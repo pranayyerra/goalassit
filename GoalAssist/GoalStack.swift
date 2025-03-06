@@ -13,12 +13,11 @@ struct GoalStack: View {
             Text("Goals")
                 .font(.largeTitle)
                 .foregroundColor(.blue)
-                .frame(maxWidth: .infinity, alignment: .leading) // Align this text to leading
+                .frame(maxWidth: 300, alignment: .leading) // Align this text to leading
             
             ScrollView(.vertical, showsIndicators: false) {
-                LazyVStack(spacing: 4) {
-                    ForEach(Goal.sampleGoals(), id: \.self) { goal in GoalElement(goal: goal)
-                    }
+                LazyVStack(spacing: 5) {
+                    ForEach(Goal.sampleGoals(), id: \.self) { goal in GoalElement(goal: goal)}
                 }
             }
 
