@@ -116,6 +116,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuj-9s-2ez">
                                 <rect key="frame" x="16" y="99" width="361" height="527"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Yuk-xF-TDv"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="p7s-Z4-fBD"/>
                             </scrollView>
