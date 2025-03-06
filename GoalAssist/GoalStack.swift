@@ -15,11 +15,12 @@ struct GoalStack: View {
                 .foregroundColor(.blue)
                 .frame(maxWidth: .infinity, alignment: .leading) // Align this text to leading
             
-            Spacer()
-            
-//            ForEach(goalId: 0..<5) { _ in
-//                GoalElement(goalId)
-//            }
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVStack(spacing: 4) {
+                    ForEach(Goal.sampleGoals(), id: \.self) { goal in GoalElement(goal: goal)
+                    }
+                }
+            }
 
             Button(action: {
                 print("Button tapped!")

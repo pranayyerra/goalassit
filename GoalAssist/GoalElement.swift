@@ -22,7 +22,7 @@ struct GoalElement: View {
 //                    .foregroundColor(.red)
             }
             
-            ProgressView(value: 0.5)
+            ProgressView(value: goal.progress)
                 .padding()
         }
         .padding(.horizontal)
@@ -31,7 +31,7 @@ struct GoalElement: View {
             RoundedRectangle(cornerRadius: 5)
                 .stroke(lineWidth: 1)
                 .foregroundStyle(Color(.systemGray2))
-                .shadow(color: .black.opacity(0.5), radius: 2)
+//                .shadow(color: .black.opacity(0.5), radius: 2)
         }
     }
 }
