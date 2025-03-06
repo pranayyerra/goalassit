@@ -21,7 +21,7 @@
                                 <rect key="frame" x="16" y="93" width="361" height="413"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">| **Goal Type** | **Goal Description** | **Action Steps** |
+                                <string key="text">| **Goal Type** | **Goal Description** | **Action Steps** |
 |---------------|----------------------|-----------------|
 | **Long-Term** | Travel to 4 countries in 4 years | Year 1: Japan, Year 2: Italy, Year 3: South Africa, Year 4: New Zealand |
 | **Long-Term** | Become a certified project manager in 3 years | Enroll in PMP course, study 5 hours/week, schedule PMP exam in 18 months |
@@ -40,7 +40,7 @@
 | **Recurring** | Pay salaries to maid/cook every Monday morning | Set automatic payment |
 | **Recurring** | Clean the house every Saturday afternoon | Set a weekly reminder |
 | **Recurring** | Water indoor plants every morning at 8 AM | Set a daily reminder |
-</mutableString>
+</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes"/>
@@ -99,10 +99,21 @@
         <!--Schedule-->
         <scene sceneID="eey-sg-bmY">
             <objects>
-                <viewController title="Schedule" id="1qK-Ev-O2e" sceneMemberID="viewController">
+                <viewController title="Schedule" id="1qK-Ev-O2e" customClass="CreateEventViewController" customModule="GoalAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ED-hp-fRt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxp-Nr-5CH">
+                                <rect key="frame" x="16" y="648" width="361" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Add to Calendar"/>
+                                <connections>
+                                    <action selector="addEventButtonTapped:" destination="1qK-Ev-O2e" eventType="touchUpInside" id="3Qq-5D-bqD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sap-iK-GAp"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
@@ -113,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uI5-ac-L2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="542"/>
+            <point key="canvasLocation" x="843.51145038167931" y="541.54929577464793"/>
         </scene>
     </scenes>
     <resources>
