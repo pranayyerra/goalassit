@@ -124,27 +124,18 @@
         <!--Schedule-->
         <scene sceneID="eey-sg-bmY">
             <objects>
-                <viewController title="Schedule" id="1qK-Ev-O2e" customClass="ScheduleTabViewController" customModule="GoalAssist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Schedule" id="1qK-Ev-O2e" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ED-hp-fRt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxp-Nr-5CH">
-                                <rect key="frame" x="16" y="648" width="361" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Add to Calendar"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zS5-KW-jsV">
+                                <rect key="frame" x="16" y="97" width="361" height="643"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <action selector="saveEventsToCalendar:" destination="1qK-Ev-O2e" eventType="touchUpInside" id="Dm7-ku-dCs"/>
+                                    <segue destination="Vc4-ue-pxi" kind="embed" id="EFa-Lj-kgA"/>
                                 </connections>
-                            </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuj-9s-2ez">
-                                <rect key="frame" x="16" y="99" width="361" height="527"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="Yuk-xF-TDv"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="p7s-Z4-fBD"/>
-                            </scrollView>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sap-iK-GAp"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
@@ -153,13 +144,18 @@
                         <imageReference key="image" image="calendar" catalog="system" symbolScale="default"/>
                         <imageReference key="selectedImage" image="calendar" catalog="system" symbolScale="default"/>
                     </tabBarItem>
-                    <connections>
-                        <outlet property="scrollView" destination="vuj-9s-2ez" id="97a-A9-QdE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uI5-ac-L2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="843.51145038167931" y="541.54929577464793"/>
+        </scene>
+        <!--Scheduler Tab Hosting Controller-->
+        <scene sceneID="qAD-lL-xv8">
+            <objects>
+                <hostingController id="Vc4-ue-pxi" customClass="SchedulerTabHostingController" customModule="GoalAssist" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hH2-zM-xgE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="1197"/>
         </scene>
     </scenes>
     <resources>
