@@ -84,6 +84,22 @@
                     <view key="view" contentMode="scaleToFill" id="QCx-gD-YwI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Bg-dC-BB2">
+                                <rect key="frame" x="0.0" y="74" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gkf-YB-H4d" id="R6X-db-3IM"/>
+                                </connections>
+                            </searchBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCE-ga-7m9">
+                                <rect key="frame" x="0.0" y="135" width="393" height="621"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="VmM-nf-LR2"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Sm8-uX-6Qf"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aBU-EO-wDN"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
@@ -94,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3F-9m-71N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="126" y="542"/>
+            <point key="canvasLocation" x="125.95419847328243" y="541.54929577464793"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="eey-sg-bmY">
