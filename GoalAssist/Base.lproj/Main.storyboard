@@ -16,6 +16,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tUC-5a-Sww">
+                                <rect key="frame" x="16" y="93" width="361" height="413"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">| **Goal Type** | **Goal Description** | **Action Steps** |
+|---------------|----------------------|-----------------|
+| **Long-Term** | Travel to 4 countries in 4 years | Year 1: Japan, Year 2: Italy, Year 3: South Africa, Year 4: New Zealand |
+| **Long-Term** | Become a certified project manager in 3 years | Enroll in PMP course, study 5 hours/week, schedule PMP exam in 18 months |
+| **Long-Term** | Run a marathon in 2 years | Start with 5km runs, gradually increase distance |
+| **Medium-Term** | Improve squash rating from 4.5 to 5.5 in 6 months | Weekly practice sessions, bi-weekly coaching, monthly tournaments |
+| **Medium-Term** | Save $10,000 in 8 months | Automate monthly savings of $1,250, reduce non-essential spending |
+| **Medium-Term** | Learn conversational Spanish in 6 months | Enroll in online course, practice 30 minutes daily |
+| **Short-Term** | Fix the broken sofa by Saturday | Contact a carpenter by Wednesday |
+| **Short-Term** | Fill fuel for the car by tomorrow evening | Set a reminder |
+| **Short-Term** | Prepare and submit quarterly report by Friday | Allocate time for report preparation |
+| **Short-Term** | Buy a birthday gift by Thursday | Set a reminder |
+| **Recurring** | Pay rent on the 1st of every month | Set automatic payment |
+| **Recurring** | Pay electricity and water bills before the 10th | Set reminders based on statement dates |
+| **Recurring** | Pay credit card bills before due dates | Set reminders based on statement dates |
+| **Recurring** | Order groceries every Sunday evening | Set a weekly reminder |
+| **Recurring** | Pay salaries to maid/cook every Monday morning | Set automatic payment |
+| **Recurring** | Clean the house every Saturday afternoon | Set a weekly reminder |
+| **Recurring** | Water indoor plants every morning at 8 AM | Set a daily reminder |
+</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
@@ -25,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-734" y="542"/>
+            <point key="canvasLocation" x="-599.23664122137404" y="541.54929577464793"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zFu-6U-ehv">
@@ -38,8 +68,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gkf-YB-H4d" kind="relationship" relationship="viewControllers" id="5sP-ib-ZDq"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="C0o-V0-mrV"/>
+                        <segue destination="gkf-YB-H4d" kind="relationship" relationship="viewControllers" id="5sP-ib-ZDq"/>
                         <segue destination="1qK-Ev-O2e" kind="relationship" relationship="viewControllers" id="RBF-CF-v3p"/>
                     </connections>
                 </tabBarController>
@@ -64,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3F-9m-71N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="542"/>
+            <point key="canvasLocation" x="126" y="542"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="eey-sg-bmY">
@@ -91,6 +121,12 @@
         <image name="pencil.and.scribble" catalog="system" width="128" height="86"/>
         <image name="signpost.right" catalog="system" width="128" height="121"/>
         <image name="signpost.right.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
