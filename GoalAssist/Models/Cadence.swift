@@ -5,7 +5,7 @@
 //  Created by Pranay Hasan Yerra on 06/03/25.
 //
 
-enum Cadence: String, Hashable, Codable {
+enum Cadence: String, Hashable, Codable, CaseIterable {
     case ONCE = "Once"
     case DAILY = "Daily"
     case WEEKLY = "Weekly"

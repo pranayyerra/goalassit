@@ -1,5 +1,5 @@
 //
-//  CreateEventViewController.swift
+//  COPYSchedulerViewController.swift - ignore for now, but may contain some useful logic that can be reused later on
 //  GoalAssist
 //
 //  Created by Pranay Hasan Yerra on 3/6/25.
@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import EventKit
 
-class SchedulerViewController: UIViewController {
+class COPYSchedulerViewController: UIViewController {
     let eventStore = EKEventStore()
     
     // MARK: - Outlets

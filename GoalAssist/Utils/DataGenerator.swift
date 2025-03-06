@@ -32,7 +32,7 @@ class DataGenerator {
         }
         
         // Generate the events for each milestone
-        func generateRandomEvents(count: Int) -> [Event] {
+        func events(count: Int) -> [Event] {
             var events: [Event] = []
             
             for _ in 0..<count {
@@ -61,7 +61,7 @@ class DataGenerator {
             for j in 0..<3 { // Let's assume 3 milestones for each goal
                 let milestoneTitle = milestoneTitles[j]
                 let milestoneProgress = Float(arc4random_uniform(101)) / 100.0 // Random progress for the milestone
-                let events = generateRandomEvents(count: 3) // Each milestone has 3 events
+                let events = events(count: 3) // Each milestone has 3 events
                 
                 let milestone = Milestone(id: Int64(j), title: milestoneTitle, events: events, progress: milestoneProgress)
                 milestones.append(milestone)
@@ -72,40 +72,5 @@ class DataGenerator {
         }
         
         return goals
-    }
-    
-    // Define the function to generate random events
-    static func generateEventDetails(count: Int) -> [EventDetails] {
-        var events = [EventDetails]()
-        
-        // Generate random events
-        for _ in 0..<count {
-            let randomTitle = randomTitle()
-            let randomStartDate = randomDate()
-            let randomEndDate = randomEndDate(from: randomStartDate)
-            
-            let event = EventDetails(title: randomTitle, startDate: randomStartDate, endDate: randomEndDate)
-            
-            events.append(event)
-        }
-        
-        return events
-    }
-    
-    // Helper function to generate random event titles
-    private static func randomTitle() -> String {
-        let titles = ["Meeting", "Workout", "Conference", "Birthday", "Project Deadline", "Dinner"]
-        return titles.randomElement() ?? "Event"
-    }
-    
-    // Helper function to generate a random start date
-    private static func randomDate() -> Date {
-        let randomTimeInterval = TimeInterval(arc4random_uniform(100000000)) // Random time in the future
-        return Date().addingTimeInterval(randomTimeInterval)
-    }
-    
-    // Helper function to generate random end date (1 hour after the start date)
-    private static func randomEndDate(from startDate: Date) -> Date {
-        return startDate.addingTimeInterval(3600) // 1 hour later
     }
 }
