@@ -11,7 +11,7 @@ import SwiftUI
 struct Goal: Hashable, Codable {
     var id: Int64?
     let title: String
-    let milestones: [MileStone]
+    let milestones: [Milestone]
     let progress: Float
     
     static func sampleGoals() -> [Goal] {
