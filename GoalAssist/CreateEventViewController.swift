@@ -11,7 +11,6 @@ import EventKit
 
 class CreateEventViewController: UIViewController {
     let eventStore = EKEventStore()
-    let dataGenerator = DataGenerator()
     
     // MARK: - Outlets
     @IBOutlet weak var scrollView: UIScrollView!
@@ -22,7 +21,7 @@ class CreateEventViewController: UIViewController {
         super.viewDidLoad()
         print("CreateEventViewController successfully launched")
 
-        events = dataGenerator.generateEventDetails(count: 15)
+        events = DataGenerator.generateEventDetails(count: 15)
         displayEvents()
     }
     
@@ -106,16 +105,9 @@ class CreateEventViewController: UIViewController {
         }
         
     }
-    
-    func showAlert(message: String, title: String = "Event Status") {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        // Add an "OK" button to dismiss the alert
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        
-        // Present the alert
-        present(alertController, animated: true, completion: nil)
+
+    private func showAlert(message: String) {
+        AlertUtils.showAlert(in: self, title: "Event Creation Status", message: message)
     }
     
     
