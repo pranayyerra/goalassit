@@ -17,9 +17,9 @@ struct GoalElement: View {
                 Text(goal.title)
                     .font(.headline)
                 Spacer()
-                Text(goal.milestones.count)
-                    .font(.headline)
-                    .foregroundColor(.red)
+//                Text(goal.milestones.count)
+//                    .font(.headline)
+//                    .foregroundColor(.red)
             }
             
             ProgressView(value: 0.5)

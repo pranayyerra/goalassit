@@ -17,9 +17,9 @@ struct GoalStack: View {
             
             Spacer()
             
-            ForEach(goalId: 0..<5) { _ in
-                GoalElement(goalId)
-            }
+//            ForEach(goalId: 0..<5) { _ in
+//                GoalElement(goalId)
+//            }
 
             Button(action: {
                 print("Button tapped!")
