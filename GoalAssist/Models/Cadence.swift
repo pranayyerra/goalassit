@@ -6,6 +6,7 @@
 //
 
 enum Cadence: String, Hashable, Codable {
+    case ONCE = "Once"
     case DAILY = "Daily"
     case WEEKLY = "Weekly"
     case BIWEEKLY = "Bi-Weekly"

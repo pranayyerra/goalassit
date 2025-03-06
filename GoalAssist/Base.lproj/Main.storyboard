@@ -115,7 +115,7 @@
         <!--Schedule-->
         <scene sceneID="eey-sg-bmY">
             <objects>
-                <viewController title="Schedule" id="1qK-Ev-O2e" customClass="CreateEventViewController" customModule="GoalAssist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Schedule" id="1qK-Ev-O2e" customClass="SchedulerViewController" customModule="GoalAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ED-hp-fRt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
